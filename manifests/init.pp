@@ -13,11 +13,11 @@ class sshd {
   }
   
   service { 'ssh':
-    ensure => running,
-    enable => true,
-    hasstatus => true,
+    ensure     => running,
+    enable     => true,
+    hasstatus  => true,
     hasrestart => true,
-    require => File['/etc/ssh/sshd_config']
+    require    => File['/etc/ssh/sshd_config']
   }
 
 }
